@@ -376,3 +376,49 @@ console.log(Game2);
 console.log(Game1);
 
 
+//obj destrucing
+
+const chromex = {
+    firstName: "bowser",
+    lastName: "Iconginto",
+
+}
+let { firstName, lastName, year = 2004 } = chromex;
+
+console.log(year);
+
+//obj destructuring
+const Laptop = {
+    Name: "Msi",
+    Modelno: 273,
+    Countryo: "china",
+}
+let { Name, Modelno, countryo, x = 21 } = Laptop;
+console.log(Laptop);
+
+
+
+
+
+//CLass
+class employeep {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+
+    }
+    greet() {
+        return "hello " + this.name;
+    }
+    changeName(newName) {
+        this.name = newName
+    }
+}
+
+
+const employee1 = new employeep("exzy", 26);
+
+employee1.changeName("JJJH")
+console.log(employee1);
+
+
