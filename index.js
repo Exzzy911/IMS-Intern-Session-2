@@ -398,8 +398,6 @@ console.log(Laptop);
 
 
 
-
-
 //CLass
 class employeep {
     constructor(name, age) {
@@ -407,18 +405,102 @@ class employeep {
         this.age = age;
 
     }
-    greet() {
-        return "hello " + this.name;
-    }
-    changeName(newName) {
+    set personName(newName) {
         this.name = newName
+    }
+    get personName() {
+        return "hello " + this.name;
     }
 }
 
-
 const employee1 = new employeep("exzy", 26);
 
-employee1.changeName("JJJH")
-console.log(employee1);
+console.log(employee1.personName);
+
+employee1.personName = "loxzyy";
+console.log(employee1.personName);
 
 
+//obj
+function perosn(name, age) {
+    this.name = name,
+        this.age = age
+}
+
+const perosn1 = new perosn("exzyy", 36);
+
+console.log(perosn1);
+
+
+// class inheritance
+
+class weather {
+    constructor(name) {
+        this.name = name;
+
+    }
+    greet() {
+        console.log("Heyyy " + this.name);
+    }
+}
+class studentW extends weather {
+
+}
+const student1 = new studentW("Exzyy");
+
+student1.greet();
+
+
+// super methods
+
+class excel {
+    constructor(name) {
+        this.name = name;
+
+    }
+    greet() {
+        console.log("Heyy " + this.name);
+    }
+}
+class microsoft extends excel {
+    constructor(name) {
+        super(name);
+    }
+}
+
+const microsoft1 = new microsoft("ms word");
+microsoft1.greet();
+
+//method overiding
+
+class gta {
+    constructor(name) {
+        this.name = name;
+    }
+    greet() {
+        console.log("This game is " + this.name);
+    }
+}
+
+class rdr extends gta {
+    greet() {
+        console.log("Heyyy this game is " + this.name);
+    }
+}
+
+const rdr1 = new rdr("red dead redemption");
+rdr1.greet();
+
+// static
+
+class battery {
+    constructor(name) {
+        this.name = name;
+    }
+    static greet() {
+        console.log("The model of battery is " + this.name);
+    }
+}
+
+const battery1 = new battery("X00911");
+battery.greet(battery1);
